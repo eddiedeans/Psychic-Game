@@ -11,8 +11,6 @@ document.onkeyup = function(event) {
 
     var userGuess = (event.key).toLowerCase(); // taking users guess
 
-     // user guess being saved in guesses so far
-
     var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
     guessesSoFar.push(userGuess);
@@ -21,6 +19,8 @@ document.onkeyup = function(event) {
         wins++;
         document.querySelector(".wins").innerHTML = "Wins: " + wins
         alert("You guessed it! You won!")
+        guessLeft = 9;
+        guessesSoFar.length = 0;
     }
 
     else if (userGuess !== computerGuess) {
@@ -31,6 +31,8 @@ document.onkeyup = function(event) {
     if (guessLeft === 0) {
         losses++;
         alert("You LOST!")
+        guessLeft = 9;
+        guessesSoFar.length = 0;
     }
 
     
