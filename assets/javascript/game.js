@@ -11,14 +11,15 @@ document.onkeyup = function(event) {
 
     var userGuess = (event.key).toLowerCase(); // taking users guess
 
-    var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+    var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)]; // random letter from computerChoices 
+    console.log(computerGuess);
 
     guessesSoFar.push(userGuess);
 
     if (userGuess == computerGuess) {
         wins++;
         document.querySelector(".wins").innerHTML = "Wins: " + wins
-        alert("You guessed it! You won!")
+        alert("You guessed it! You won! The letter was " + computerGuess + "!")
         guessLeft = 9;
         guessesSoFar.length = 0;
     }

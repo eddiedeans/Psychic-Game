@@ -1,0 +1,23 @@
+body {
+    background: lightblue;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+.contentBackground {
+    background: lightgray;
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left:-250px;
+    margin-top:-250px;
+    width:500px;
+    height:250px;
+}
